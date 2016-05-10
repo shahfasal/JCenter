@@ -1,1 +1,42 @@
+apply plugin: 'com.github.dcendents.android-maven'
 
+group = com.lostinkaos.mylibrary                               // Maven Group ID for the artifact
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                groupId publishedGroupId
+                artifactId feed-like
+
+                // Add your description here
+                name FeedLike
+                description A wrapper for Feed test
+                
+
+                // Set your license
+                licenses {
+                    license {
+                        name The Apache Software License, Version 2.0
+                        url http://www.apache.org/licenses/LICENSE-2.0.txt
+                    }
+                }
+                developers {
+                    developer {
+                        id fasal
+                        name Fasal Shah
+                        email fasal@lostinkaos.com
+                    }
+                }
+                scm {
+                    connection http://git.kaos.agency/fasal/maven-test.git
+                    developerConnection http://git.kaos.agency/fasal/maven-test.git
+                    
+
+                }
+            }
+        }
+    }
+}
